@@ -1,0 +1,120 @@
+package com.oracleoaec.mynew;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.app.Activity;
+import android.app.ActionBar;
+import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.os.Build;
+
+public class MainActivity extends Activity {
+    ListView listView;
+    ArrayList<Map<String,String>> dataList;
+    MyBaseAdaper adapter;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView= (ListView) findViewById(R.id.listView);
+        //准备数据
+        dataList=new ArrayList<Map<String,String>>();
+        
+        //准备第一组数据
+        HashMap<String, String> map=new HashMap<String, String>();
+        map.put("name", "王zi");
+        map.put("number", "号码:11013");
+        dataList.add(map);
+        //准备第二组
+        map=new HashMap<String, String>();
+        map.put("name", "李四");
+        map.put("number", "号码:11012");
+        dataList.add(map);
+        
+        for(int i=0;i<=20;i++){
+        map=new HashMap<String, String>();
+        map.put("name", "马武");
+        map.put("number", "号码:11013");
+        dataList.add(map);
+        }
+      //新建适配器
+        adapter=new MyBaseAdaper();
+    //给控件设置适配器    
+        listView.setAdapter(adapter);
+       //给listview设置点击监听事件
+        listView.setOnItemClickListener(new OnItemClickListener() {
+//每一项被点击的时候，会被调用
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				String Num = dataList.get(arg2).get("number");
+				
+			Intent intent=new Intent(Intent.ACTION_CALL,Uri.parse("number:"+Num));
+			startActivity(intent);
+			
+			}
+		});
+        
+        
+    }
+  //新建适配器
+    class MyBaseAdaper extends BaseAdapter{
+//获得数据源的数量
+		@Override
+		public int getCount() {
+			// TODO Auto-generated method stub
+			return dataList.size();
+		}
+//获得相应位置的数据
+		@Override
+		public Object getItem(int arg0) {
+			// TODO Auto-generated method stub
+			return dataList.get(arg0);
+		}
+//
+		@Override
+		public long getItemId(int arg0) {
+			// TODO Auto-generated method stub
+			return arg0;
+		}
+
+		@Override
+		public View getView(int arg0, View arg1, ViewGroup arg2) {
+			// TODO Auto-generated method stub
+			//1加载布局  item
+			LayoutInflater li=getLayoutInflater();
+			View v=li.inflate(R.layout.item, null);
+			//2关联控件
+			ImageView iv=(ImageView) v.findViewById(R.id.imageView);
+			TextView textName=(TextView) v.findViewById(R.id.textName);
+			TextView textNum=(TextView) v.findViewById(R.id.textNum);
+			
+			//3给控件设置属性
+			iv.setImageResource(R.drawable.ic_launcher);
+			//从集合中将相应位置的值取出，设置在控件上
+			textName.setText(dataList.get(arg0).get("name"));
+			textNum.setText(dataList.get(arg0).get("number"));
+			return v;
+		}
+	}
+	
+
+
+}

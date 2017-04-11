@@ -1,0 +1,96 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.oarcleoaec.xzapp.XzActivity"
+    tools:ignore="MergeRootFrame" 
+    android:background="@drawable/xz3"
+     >
+     <ScrollView 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+          <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical">
+          <TextView
+        android:id="@+id/tvKs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="欢迎进入星座的世界！"
+        android:textColor="#66ccff"  
+        android:textSize="25sp" />   
+    <TextView
+        android:id="@+id/tvXzs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#9400D3"
+        android:text="星座小知识 ：" />
+     <TextView
+        android:id="@+id/tvXzz1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="十二星座优点:"/>
+    <TextView
+        android:id="@+id/tvXzz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFE4C4"
+        android:text="
+白羊座：充满希望、和蔼可亲、行动力、活力充沛、诚心诚意、天生长才、勇敢\n 　
+金牛座：浪漫、决断能力、逻辑性思考、勤勉、灵巧、热心、忍耐心 、超强的艺术天赋\n　
+双子座：多样性、洞察力、开朗、反映机智、演技佳、宽大、魅力，善变\n　
+巨蟹座：第六感、主观、反应佳、想象力、慎重、执着、毅力\n　
+狮子座：自尊心、慈善、权利、思考、保护他人、忠诚心、热情\n　
+处女座：有板有眼、服务、鉴赏力、完美主义、谦虚、头脑清晰、实际\n　
+天秤座：理想主义、公正、追求、社交手腕强、审美观、魅力、 艺术力强、美丽、善良\n　
+天蝎座：神秘、理性、独立、直觉、规律、奉献、观察力 、真正魅力、冥想\n　
+射手座：理性、勇敢、细心、发展力、活泼、廉耻心、热心 、可爱、乐观\n　
+摩羯座：优越、聪明、实际、野心、可靠、不屈不挠、宽大 、乐观\n　
+水瓶座：独创力、宽容、理想、先见之明、友爱、慈善、独立\n　
+双鱼座：自觉、唯美的、柏拉图式的爱、幻想、牺牲奉献、 善良、好脾气  
+" />
+    <TextView
+        android:id="@+id/tvXzz2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:text="十二星座缺点:"/>
+    <TextView
+        android:id="@+id/tvXzz3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFE4C4"
+        android:text="
+白羊座：稚拙、刚愎自用、性急、好战、没耐心 \n　
+金牛座：偏见、依赖心、死脑筋、求胜心太强、固执\n　
+双子座：临时抱佛脚、性格不定、双重人格、投机取巧、八卦、没恒心\n　
+巨蟹座：情欲、贪婪、占有欲、敏感、情绪化、无主见\n　
+狮子座：傲慢、虚荣心、放纵、浪费、任性、自我满足\n　
+处女座：挑剔、媚于俗世、不善表达、好管闲事、拘泥\n　
+天秤座：诱惑、犹豫不决、自恋、爱美、敷衍、随心所欲、懒惰、爱表现\n　
+天蝎座：多疑、狂热、复杂、过于主动、占有欲强、极端\n　
+射手座：丢三落四、糊涂、草率、花心、粗心、不守信用\n　
+摩羯座：顽固、暴躁、享乐主义、孤独、不灵活、疑神疑鬼\n　
+水瓶座：善变、不服从、自由主义、冒然行动、无远虑、叛逆、令人猜不透\n　
+双鱼座：畏缩、逃避困难、感伤、优柔寡断、意志薄弱、不现实
+" />
+     <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快查一查星座运势吧~么么哒~"
+        android:textColor="#FFDEAD"
+        android:textSize="25px"
+        android:textStyle="bold"
+        android:layout_gravity="center" />
+     </LinearLayout>  
+     </ScrollView>
+</LinearLayout>
+

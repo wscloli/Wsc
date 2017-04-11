@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Oracle.xzapp.MainActivity"
+    android:orientation="vertical"
+   android:background="@drawable/sp"
+    tools:ignore="MergeRootFrame" >
+ <!-- 查看界面 -->
+ 
+    <TextView
+        
+        android:id="@+id/tv"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#D02090"
+        
+        />
+    <ImageView 
+        android:id="@+id/iv"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"    
+   />
+        
+        <!-- 最后的查看界面的图片 -->
+        
+</LinearLayout>

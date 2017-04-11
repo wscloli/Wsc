@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.Oracle.xzapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.Oracle.xzapp.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.thinkland.juheapi.openid"
+            android:value="JH7686bf076e1a3bf4ec114cf410c740e6" />
+
+        <activity
+            android:name="com.Oracle.xzapp.MainActivitystart"
+            android:label="@string/title_activity_main_activitystart" >
+        </activity>
+        <activity
+            android:name="com.Oracle.xzapp.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.Oracle.xzapp.XzMainActivity"
+            android:label="@string/title_activity_xz_main" >
+             
+        </activity>
+        
+        <activity
+            android:name="com.Oracle.xzapp.MainActivityjump"
+            android:label="@string/title_activity_main_activityjump" >
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+    </application>
+
+</manifest>

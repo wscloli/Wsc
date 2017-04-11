@@ -1,0 +1,105 @@
+package com.oracleoaec.mynew;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.thinkland.sdk.android.DataCallBack;
+import com.thinkland.sdk.android.JuheData;
+import com.thinkland.sdk.android.Parameters;
+
+import android.app.Activity;
+import android.app.ActionBar;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.os.Build;
+
+public class TrainActivity extends Activity {
+TextView tv;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_train);
+     tv=(TextView)findViewById(R.id.tv);
+     requestJHData("北京", "上海");
+	 	
+	}
+	public void requestJHData( String start,String end){
+	Parameters params=new Parameters();
+    params.add("start",start);
+	 params.add("end",end);
+	 params.add("dtype", "json");
+	 
+    //请求聚合数据
+    JuheData.executeWithAPI(
+   		 TrainActivity.this, //上下文对象
+   		 22, //数据ID
+   		 "http://apis.juhe.cn/train/s2s",//接口地址
+   		 JuheData.GET,//请求方法
+   		 params,
+   		 //请求参数
+   		 new DataCallBack() {
+				//请求数据成功后执行
+				@Override
+				public void onSuccess(int arg0, String arg1) {
+					// TODO Auto-generated method stub
+					//如果成功，arg1就是返回的json数据
+					//tv.setText(arg1);
+					Log.i("火车票信息》》",arg1);
+				    //获得json
+					try {
+						JSONObject json=new JSONObject(arg1);
+						//获得result
+						JSONObject result=json.getJSONObject("result");
+						//获得data
+						JSONArray data=result.getJSONArray("data");
+						//获得路线一
+						JSONObject line1=data.getJSONObject(0);
+						//获得路线一的详细信息
+						//获得发车时间
+						String leave_time =line1.getString("leave_time");
+						String start_staion=line1.getString("start_staion");
+						String arrived_time =line1.getString("arrived_time");
+						//获得路线二
+						
+						
+						//设置属性，将解析的数据显示在界面上
+						
+						tv.setText(start_staion);
+						
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+				
+				}
+				//请求不管成功还是失败
+				@Override
+				public void onFinish() {
+					// TODO Auto-generated method stub
+					
+					Toast.makeText(TrainActivity.this, "请求成功", Toast.LENGTH_SHORT).show();
+					
+					
+					
+				}
+				//请求失败
+				@Override
+				public void onFailure(int arg0, String arg1, Throwable arg2) {
+					// TODO Auto-generated method stub
+					
+					Toast.makeText(TrainActivity.this, arg0+arg1, Toast.LENGTH_SHORT).show();
+				}
+			});//接口回调方法
+	}  
+
+}
