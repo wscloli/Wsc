@@ -1,6 +1,0 @@
-package com.wsc.extend;
-
-public class animal {
-	String name;
-	
-}
