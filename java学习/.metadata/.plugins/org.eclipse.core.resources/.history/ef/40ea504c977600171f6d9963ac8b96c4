@@ -8,9 +8,7 @@ public class Main {
 		wangcai.name="wangcai";
 		System.out.println(wangcai.name);
 		wangcai.eat();
-		//System.out.println(wangcai);//Dog类在内存中的地址
 		System.out.println(wangcai.toString());
-		
 	}
 
 }

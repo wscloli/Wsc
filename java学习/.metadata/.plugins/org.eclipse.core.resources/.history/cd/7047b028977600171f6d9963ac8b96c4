@@ -13,8 +13,8 @@ public class Animal {
 	void eat(){
 		System.out.println("I can eat food");
 	}
-	//重写了toString
-	public String toString() {//toString 方法   返回地址值  属性值
-	return "Animal [i=" + i + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
+	@Override
+	public String toString() {
+		return "Animal [i=" + i + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
 	}
 }
