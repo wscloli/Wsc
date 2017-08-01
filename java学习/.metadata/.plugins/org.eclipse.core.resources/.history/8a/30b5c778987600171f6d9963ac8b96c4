@@ -2,8 +2,7 @@ package com.wsc.extend;
 
 public class Dog extends Animal{
 	public Dog(){
-		//调用了父类构造方法
-		super();
+		super();//调用父类构造方法
 		System.out.println("wangwang");
 		
 	}
