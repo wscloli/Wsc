@@ -2,7 +2,7 @@ package com.wsc.extend;
 
 public class Dog extends Animal{
 	public Dog(){
-		//瀵逛簬鐖剁被鏋勯�犳柟娉曠殑寮曠敤
+		//调用了父类构造方法
 		super();
 		System.out.println("wangwang");
 		
