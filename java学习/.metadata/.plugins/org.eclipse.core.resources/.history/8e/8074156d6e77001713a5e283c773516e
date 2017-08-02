@@ -17,7 +17,6 @@ public class Animal {
 		result = prime * result + ((sex == null) ? 0 : sex.hashCode());
 		return result;
 	}
-	//÷ÿ–¥¡Àequals  
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
