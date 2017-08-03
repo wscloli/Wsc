@@ -17,12 +17,12 @@ public class Main extends Animal {
 		if(animal instanceof Dog){
 			Dog dog4=(Dog)animal;
 		}else{
-			System.out.println("不能编译 Dog");
+			System.out.println("�޷����� Dog");
 		}
 		if(animal instanceof Cat){
 			Cat cat2=(Cat)animal;
 		}else{
-			System.out.println("不能编译 Cat");
+			System.out.println("�޷����� Cat");
 		}
 		
 		

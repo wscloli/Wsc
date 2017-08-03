@@ -1,8 +1,8 @@
-package com.wsc.¶àÌ¬;
+package com.wsc.å¤šæ€;
 
 public class  Animal{
 	void eat(){
-		System.out.println("ÎÒÄÜ³Ô");
+		System.out.println("èƒ½åƒä¸œè¥¿");
 	}
 
 }

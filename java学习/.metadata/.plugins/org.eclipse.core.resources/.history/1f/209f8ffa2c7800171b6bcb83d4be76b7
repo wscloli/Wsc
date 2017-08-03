@@ -13,16 +13,16 @@ public class Main extends Animal {
 		cat1.eat();
 		Dog dog3=new Dog();
 		Animal animal=dog3;//类型转换  向上转型  子类型转换成父类型
-		//instanceof  返回一个布尔值判断一个对象是否属一个类
+		//instanceof  返回一个布尔值判断一个对象是否属一个个类
 		if(animal instanceof Dog){
 			Dog dog4=(Dog)animal;
 		}else{
-			System.out.println("不能编译 Dog");
+			System.out.println("�޷����� Dog");
 		}
 		if(animal instanceof Cat){
 			Cat cat2=(Cat)animal;
 		}else{
-			System.out.println("不能编译 Cat");
+			System.out.println("�޷����� Cat");
 		}
 		
 		

@@ -1,11 +1,11 @@
-package com.wsc.¶àÌ¬;
+package com.wsc.å¤šæ€;
 
 public class Dog extends Animal {
 	void eat(){
-		System.out.println("ÎÒ»á³ÔÈâ");
+		System.out.println("èƒ½åƒè‚‰");
 	}
 	void watchdoor(){
-		System.out.println("ÎÒ»á¿´¼Ò");
+		System.out.println("èƒ½çœ‹å®¶");
 	}
 	
 }

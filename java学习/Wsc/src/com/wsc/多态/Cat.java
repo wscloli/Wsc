@@ -1,7 +1,7 @@
-package com.wsc.¶àÌ¬;
+package com.wsc.å¤šæ€;
 
 public class Cat extends Animal {
 	void eat(){
-		System.out.println("ÎÒ»á³ÔÓã");
+		System.out.println("èƒ½åƒé±¼");
 	}
 }
