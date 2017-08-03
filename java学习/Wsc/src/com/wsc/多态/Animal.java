@@ -1,10 +1,8 @@
 package com.wsc.¶àÌ¬;
 
-public class Animal {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+public class  Animal{
+	void eat(){
+		System.out.println("ÎÒÄÜ³Ô");
 	}
 
 }

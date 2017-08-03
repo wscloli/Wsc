@@ -6,7 +6,7 @@ public class Animal {
 	//修饰方法，不允许重写
 	public Animal(){
 		System.out.println("I am a Animal");
-	}
+	}//构造方法
 	@Override
 	public int hashCode() {
 		final int prime = 31;
