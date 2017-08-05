@@ -1,0 +1,14 @@
+package com.wsc.多态;
+
+public class Abstract {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Shape a1=new Rectangle();
+		System.out.println(a1.c()," ",a1.s());
+		Shape b1=new Circle();
+		b1.c();
+		b1.s();
+	}
+
+}
