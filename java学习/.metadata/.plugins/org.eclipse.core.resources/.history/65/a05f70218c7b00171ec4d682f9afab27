@@ -1,6 +1,6 @@
 package com.wsc.多态;
 
-public class Dog extends Animal{
+public class Dog extends Animal implement Running{
 	void eat(){
 		System.out.println("能吃肉");
 	}

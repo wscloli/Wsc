@@ -1,0 +1,11 @@
+package com.wsc.多态;
+
+public class Dazhong extends Car implements Running {
+
+	@Override
+	public void running() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

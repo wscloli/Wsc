@@ -1,0 +1,5 @@
+package com.wsc.多态;
+//接口  
+public interface Running{
+	void running();
+}

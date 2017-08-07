@@ -1,0 +1,15 @@
+package com.wsc.多态;
+
+public class Interface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Running dz1=new Dazhong();
+		dz1.running();
+		Car dz2=new Dazhong();
+		dz2.a();
+		Running byd1=new Byd();
+		byd1.running();
+	}
+
+}
