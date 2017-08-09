@@ -1,11 +1,12 @@
 package com.wsc.extend;
 
 public class Animal {
-	final int i=3;//final å¸¸é‡
-	//final 
+	final int i=3;//final ³£Á¿
+	//final ĞŞÊÎÀà£¬²»ÔÊĞí±»¼Ì³Ğ
+	//ĞŞÊÎ·½·¨£¬²»ÔÊĞíÖØĞ´
 	public Animal(){
 		System.out.println("I am a Animal");
-	}//æ„é€ æ–¹æ³•
+	}//¹¹Ôì·½·¨
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -16,7 +17,7 @@ public class Animal {
 		result = prime * result + ((sex == null) ? 0 : sex.hashCode());
 		return result;
 	}
-	//é‡å†™equals  
+	//ÖØĞ´ÁËequals  
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -48,8 +49,8 @@ public class Animal {
 	void eat(){
 		System.out.println("I can eat food");
 	}
-	//ï¿½ï¿½Ğ´ï¿½ï¿½toString
-	public String toString() {//toString ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½Øµï¿½Ö·Öµ  ï¿½ï¿½ï¿½ï¿½Öµ
+	//ÖØĞ´ÁËtoString
+	public String toString() {//toString ·½·¨   ·µ»ØµØÖ·Öµ  ÊôĞÔÖµ
 	return "Animal [i=" + i + ", name=" + name + ", age=" + age + ", sex=" + sex + "]";
 	}
 }

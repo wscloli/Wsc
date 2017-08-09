@@ -2,7 +2,8 @@ package com.wsc.extend;
 
 public class Animal {
 	final int i=3;//final 常量
-	//final 
+	//final �����࣬�������̳�
+	//���η�������������д
 	public Animal(){
 		System.out.println("I am a Animal");
 	}//构造方法
