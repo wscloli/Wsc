@@ -1,7 +1,0 @@
-package com.wsc.∂‡Ã¨;
-
-import com.wsc.extend.Animal;
-
-public class Dog extends Animal {
-
-}

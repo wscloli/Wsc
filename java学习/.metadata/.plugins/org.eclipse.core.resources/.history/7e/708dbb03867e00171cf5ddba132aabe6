@@ -1,0 +1,33 @@
+package com.wsc.Text;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		RCar AD=new RCar("奥迪A4",500,4);
+		RCar MD=new RCar("马自达6",400,4);
+		RWCar PK=new RWCar("皮卡雪6",450,4,2);
+		RCar JL=new RCar("金龙",800,20);
+		WCar SJ=new WCar("松花江",400,4);
+		WCar YK=new WCar("依维柯",1000,20);
+		System.out.println("欢迎使用答答租车系统：");
+		System.out.println("您是否要租车：1是 0否");
+		Scanner input=new Scanner(System.in);
+		int a=input.nextInt();
+		if(a==0){
+			System.out.println("退出");
+		}
+		else{
+			System.out.println("...");
+			System.out.println("租车数量：");
+			int b=input.nextInt();//b  租车数量
+			for(int i=1;i<=b;i++){
+				System.out.println("第一辆车是：");
+			int c=input.nextInt(); //c  车序号
+			}
+		}
+	}
+
+}

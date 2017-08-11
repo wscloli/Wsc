@@ -1,0 +1,9 @@
+package com.wsc.Text;
+
+public class RWCar extends Car {
+	public RWCar(String i,int x,int y){
+		name=i;
+		m=x;
+		rw=y;
+	}
+}

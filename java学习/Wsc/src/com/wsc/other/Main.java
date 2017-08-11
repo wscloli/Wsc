@@ -7,8 +7,11 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//输入
-		Scanner input=new Scanner(System.in);
-		int a=input.nextInt();
+		//Scanner input=new Scanner(System.in);
+		//int a=input.nextInt();
+		String ms="";
+		ms=ms+"assds"+","+"asd";
+		System.out.println(ms);
 	}
 
 }
