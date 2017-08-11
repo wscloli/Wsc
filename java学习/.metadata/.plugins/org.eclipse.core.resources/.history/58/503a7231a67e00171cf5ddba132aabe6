@@ -1,7 +1,7 @@
 package com.wsc.Text;
 
 import java.util.Scanner;
-// 测试     答答租车系统 
+// 测试     答答租车系统
 public class Main {
 
 	public static void main(String[] args) {

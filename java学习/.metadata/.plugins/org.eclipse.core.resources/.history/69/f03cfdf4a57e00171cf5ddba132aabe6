@@ -1,7 +1,7 @@
 package com.wsc.Text;
 
 import java.util.Scanner;
-// 测试     答答租车系统 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -70,8 +70,7 @@ public class Main {
 				}
 			}
 			System.out.println("租用天数：");
-			int d=input.nextInt();
-			m=m*d;
+			m=m*3;
 			System.out.println("车账单：");
 			System.out.println("载人车有："+rs+""+"载人："+r+"人");
 			System.out.println("载物车有："+ws+""+"载物："+w+"吨");

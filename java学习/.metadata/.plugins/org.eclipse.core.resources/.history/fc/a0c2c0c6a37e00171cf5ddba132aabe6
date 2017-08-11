@@ -1,7 +1,7 @@
 package com.wsc.Text;
 
 import java.util.Scanner;
-// 测试     答答租车系统 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -24,60 +24,39 @@ public class Main {
 			System.out.println("租车数量：");
 			int b=input.nextInt();//b  租车数量
 			String rs=""; // 载人车的名字
-			int r=0;  //载人数量
-			
+			int r=0;  //载人车的数量
 			String ws=""; // 载物车的名字
-			int w=0; // 载物重量
+			int w=0; // 载物车的数量
 			int m=0; // 车的价格
 			
 			for(int i=1;i<=b;i++){
 				System.out.println("第"+i+"辆车是：");
 			int c=input.nextInt(); //c  车序号
 			switch(c){
-			//通过选的车序号，依次叠加下去
 			case 1: 
-				rs=rs+""+AD.name;
-				r=r+AD.r;
-				m=m+AD.m;
-				break;
+				rs=rs+","+AD.name;
+				r=r+1;
+				
 			case 2:
-				rs=rs+""+MD.name;
-				r=r+MD.r;
-				m=m+MD.m;
-				break;
+				rs=rs+","+MD.name;
+				r=r+1;
 			case 3:
-				rs=rs+""+PK.name;
-				r=r+PK.r;
-				ws=ws+""+PK.name;
-				w=w+PK.w;
-				m=m+PK.m;
-				break;
+				rs=rs+","+PK.name;
+				r=r+1;
+				ws=ws+","+PK.name;
+				w=w+1;
 			case 4:
-				rs=rs+""+JL.name;
-				r=r+JL.r;
-				m=m+JL.m;
-				break;
+				rs=rs+","+JL.name;
+				r=r+1;
 			case 5:
-				ws=ws+""+SJ.name;
-				w=w+SJ.w;
-				m=m+SJ.m;
-				break;
+				ws=ws+","+SJ.name;
+				w=w+1;
 			case 6:
-				ws=ws+""+YK.name;
-				w=w+YK.w;
-				m=m+YK.m;
-				break;
+				ws=ws+","+YK.name;
+				w=w+1;
 				}
-			}
-			System.out.println("租用天数：");
-			int d=input.nextInt();
-			m=m*d;
-			System.out.println("车账单：");
-			System.out.println("载人车有："+rs+""+"载人："+r+"人");
-			System.out.println("载物车有："+ws+""+"载物："+w+"吨");
-			System.out.println("总金额："+m);
 			}
 		}
 	}
 
-
+}
