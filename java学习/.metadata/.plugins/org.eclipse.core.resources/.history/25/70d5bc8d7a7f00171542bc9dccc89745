@@ -8,6 +8,6 @@ public class WCar extends Car {
 		w=y;
 	}
 	public void shuxing(){
-		System.out.println(name+'\t'+m+"元"+'\t'+w+"吨");
+		System.out.println(name+""+m+"元"+""+w+"吨");
 	}
 }

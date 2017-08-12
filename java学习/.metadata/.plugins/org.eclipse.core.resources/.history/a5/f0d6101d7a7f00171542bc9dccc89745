@@ -17,18 +17,7 @@ public class Main2 {
 		}else{
 			System.out.println("租车类型表：");
 			System.out.println("序号  汽车名称   租 金        容 量");
-			System.out.print("1\t");
-			car[0].shuxing();
-			System.out.print("2\t");
-			car[1].shuxing();
-			System.out.print("3\t");
-			car[2].shuxing();
-			System.out.print("4\t");
-			car[3].shuxing();
-			System.out.print("5\t");
-			car[4].shuxing();
-			System.out.print("6\t");
-			car[5].shuxing();
+			
 		}
 	}
 
