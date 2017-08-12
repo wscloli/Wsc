@@ -6,7 +6,5 @@ public class RCar extends Car {
 		m=x;
 		r=y;
 	}
-	public void shuxing(){
-		System.out.println(name+""+m+"元"+""+r+"人");
-	}
+	
 }

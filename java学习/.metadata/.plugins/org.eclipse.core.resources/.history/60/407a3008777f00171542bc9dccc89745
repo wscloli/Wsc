@@ -15,8 +15,6 @@ public class Main2 {
 			System.out.println("退出系统");
 			
 		}else{
-			System.out.println("租车类型表：");
-			System.out.println("序号  汽车名称   租 金        容 量");
 			
 		}
 	}

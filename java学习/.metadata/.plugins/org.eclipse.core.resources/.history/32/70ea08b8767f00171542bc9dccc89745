@@ -7,7 +7,4 @@ public class RWCar extends Car {
 		r=y;
 		w=z;
 	}
-	public void shuxing(){
-		System.out.println(name+""+m+"元"+""+r+"人"+""+w+"吨");
-	}
 }
