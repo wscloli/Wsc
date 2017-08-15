@@ -1,6 +1,6 @@
-package com.wsc.多态;
+package com.wsc.Throwable;
 
-public class Interface {
+public class Text {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
