@@ -19,10 +19,10 @@ public class Text {
 			result=result+a/c;
 		}
 	}catch(Exception e){
-		System.out.println("输出异常了，返回值为"+result);
+		System.out.println("输出异常了");
 		return -1;
 	}finally {
-		System.out.println("结果为"+result);
+		System.out.println("结果为");
 		return -1;
 	}
 
