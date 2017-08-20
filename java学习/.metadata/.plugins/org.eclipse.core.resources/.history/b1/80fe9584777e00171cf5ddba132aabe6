@@ -1,5 +1,0 @@
-package com.wsc.Text;
-
-public class RCar extends Car {
-
-}
