@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","onCreate execute");
 
         Log.w(TAG, "onCreate: " );
-        Button button1=(Button)findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener(){
+        Button button1=(Button)findViewById(R.id.button);  //获取布局文件定义元素
+       button1.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Toast.makeText(MainActivity.this,"you jump,I click",Toast.LENGTH_LONG).show();
 
