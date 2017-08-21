@@ -3,6 +3,8 @@ package com.example.wsc.text;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     //logt+Tab键
@@ -15,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("MainActivity","onCreate execute");
 
         Log.w(TAG, "onCreate: " );
+        Button button1=(Button)findViewById(R.id.button);
+        button1.setOnClickListener(new View.OnClickListener(){
+            public void onClick
+        });
 
     }
 }

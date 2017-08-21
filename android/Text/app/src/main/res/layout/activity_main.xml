@@ -49,4 +49,10 @@
         android:layout_height="wrap_content"
         app:srcCompat="@mipmap/ic_launcher" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
 </LinearLayout>
