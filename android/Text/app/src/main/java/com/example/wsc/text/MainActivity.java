@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     //logt+Tab键
@@ -19,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
         Log.w(TAG, "onCreate: " );
         Button button1=(Button)findViewById(R.id.button);
         button1.setOnClickListener(new View.OnClickListener(){
-            public void onClick
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this,"you jump,I click",Toast.LENGTH_LONG).show();
+
+            }
         });
 
     }
