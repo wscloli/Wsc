@@ -13,18 +13,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);//加载一个布局
         //调试信息  Log.d()
         Log.d("MainActivity","onCreate execute");
 
         Log.w(TAG, "onCreate: " );
         Button button1=(Button)findViewById(R.id.button);  //获取布局文件定义元素
-       button1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Toast.makeText(MainActivity.this,"you jump,I click",Toast.LENGTH_LONG).show();
-
+        button1.setOnClickListener(new View.OnClickListener(){//注册一个监听器
+            public void onClick(View v){//执行监听器中的onclick方法
+                Toast.makeText(MainActivity.this,"www",Toast.LENGTH_SHORT).show();
             }
-        });
 
+        });
     }
 }
