@@ -1,5 +1,6 @@
 package com.example.wsc.text;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,7 +52,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v){
                 Toast.makeText(MainActivity.this,"销毁活动",Toast.LENGTH_SHORT).show();
                 //销毁活动~
-                finish();
+               // finish();
+            }
+        });
+        Button button3=(Button)findViewById(R.id.button3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                //显式tent
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(intent);
             }
         });
 
