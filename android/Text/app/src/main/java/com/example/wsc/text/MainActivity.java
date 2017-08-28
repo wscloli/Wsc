@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        Button button2=(Button)findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this,"销毁活动",Toast.LENGTH_SHORT).show();
+                //销毁活动~
+                finish();
+            }
+        });
 
     }
 }
