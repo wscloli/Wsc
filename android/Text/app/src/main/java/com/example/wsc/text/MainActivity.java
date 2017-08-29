@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    //logt+Tab键
+    //log t+Tab键
     private static final String TAG = "MainActivity";
 
     @Override
@@ -25,8 +25,15 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.add_item:
                 Toast.makeText(this,"ADD",Toast.LENGTH_SHORT).show();
+                break;
             case R.id.remove_item:
                 Toast.makeText(this,"REMOVE",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.intent_item:
+                Intent intent=new Intent(MainActivity.this,Main2Activity.class);
+                startActivity(intent);
+                // item.setIntent(intent);
+                break;
         }
 
         return super.onOptionsItemSelected(item);
