@@ -1,5 +1,0 @@
-package com.wsc.Throwable;
-
-public class MyException extends Exception{
-	
-}
