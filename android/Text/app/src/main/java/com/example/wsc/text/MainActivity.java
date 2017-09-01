@@ -43,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//加载一个布局
-        //调试信息  Log.d()
+        //调试信息  Log.d()   日志
         Log.d("MainActivity","onCreate execute");
 
         Log.w(TAG, "onCreate: " );
+        /*
+        *Toast*/
         Button button1=(Button)findViewById(R.id.button);  //获取布局文件定义元素
         button1.setOnClickListener(new View.OnClickListener(){//注册一个监听器
             public void onClick(View v){//执行监听器中的onclick方法
@@ -54,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+
+        Button button4=(Button)findViewById(R.id.button4);
+
+
+
         Button button2=(Button)findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
@@ -62,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
                // finish();
             }
         });
+
+
+
         Button button3=(Button)findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
