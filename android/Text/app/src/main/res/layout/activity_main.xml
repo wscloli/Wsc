@@ -68,9 +68,9 @@
         android:text="跳转活动" />
     <Button
         android:id="@+id/button4"
-        android:layout_wdth="match_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="带图片的toast"i
+        android:text="带图片的toast"
         />
 
 </LinearLayout>

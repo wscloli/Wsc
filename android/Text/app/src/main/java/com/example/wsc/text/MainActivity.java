@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -58,7 +59,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button button4=(Button)findViewById(R.id.button4);
-
+        button4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast toast=Toast.makeText(MainActivity.this,"图片Toast",Toast.LENGTH_SHORT);
+                toast.getView();
+                toast.show();
+            }
+        });
 
 
         Button button2=(Button)findViewById(R.id.button2);
