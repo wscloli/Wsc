@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -63,7 +64,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 Toast toast=Toast.makeText(MainActivity.this,"图片Toast",Toast.LENGTH_SHORT);
-                toast.getView();
+                LinearLayout toast_layout=(LinearLayout)toast.getView();
+                ImageView iv=new ImageView(MainActivity.this);
+                iv.setImageResource(R.drawable.);
+
                 toast.show();
             }
         });
