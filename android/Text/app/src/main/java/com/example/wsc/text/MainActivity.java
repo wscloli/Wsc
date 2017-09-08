@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast toast=Toast.makeText(MainActivity.this,"图片Toast",Toast.LENGTH_SHORT);
                 LinearLayout toast_layout=(LinearLayout)toast.getView();
                 ImageView iv=new ImageView(MainActivity.this);
-                iv.setImageResource(R.drawable.2)
+                iv.setImageResource(R.drawable.wsc);
                 toast_layout.addView(iv);
                 toast.show();
             }
