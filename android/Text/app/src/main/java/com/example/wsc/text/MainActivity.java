@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        //带有图片的toast
         Button button4=(Button)findViewById(R.id.button4);
         button4.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -72,6 +74,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //自定义的toast
+        Button button5=(Button)findViewById(R.id.button5);
+        button5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                LayoutInflater inflater=LayoutInflater.from(MainActivity.this);
+                View toast_view=inflater.inflate(R.layout.activity_main,null); //引用的这个活动里的对象
+                Toast toast=new Toast(MainActivity.this);
+                toast.setView(toast_view);
+                toast.show();
+            }
+        });
+
+
 
         Button button2=(Button)findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener(){
@@ -83,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //使用Intent切换活动
 
         Button button3=(Button)findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
