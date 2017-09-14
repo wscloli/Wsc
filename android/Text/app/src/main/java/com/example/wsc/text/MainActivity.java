@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.intent_item:
                 Intent intent=new Intent(MainActivity.this,Main2Activity.class);
                 startActivity(intent);
-                // item.setIntent(intent);
+                // item.setIntent(intent); 跳转活动
                 break;
         }
 
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 LayoutInflater inflater=LayoutInflater.from(MainActivity.this);
-                View toast_view=inflater.inflate(R.layout.activity_main,null); //引用的这个活动里的对象
+                View toast_view=inflater.inflate(R.layout.activity_main2,null); //引用的这个活动里的对象
                 Toast toast=new Toast(MainActivity.this);
                 toast.setView(toast_view);
                 toast.show();
