@@ -8,7 +8,8 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.main2,menu);
+        return true;     //显示菜单
     }
 
     @Override
