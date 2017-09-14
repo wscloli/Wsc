@@ -19,10 +19,10 @@ public class Main2Activity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){    //判断点击的是那一个菜单项
             case R.id.Test:
+
                 Toast.makeText(this,"测试1",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Test2:
-
                 Toast toast=Toast.makeText(this,"测试二",Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.CENTER,0,0);
                 toast.show();
