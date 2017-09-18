@@ -13,7 +13,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main2,menu);
-        //menu.add(1,100,1,"菜单一");     //动态添加菜单项
+        //menu.add(1,100,1,"菜单一");     //动态添加菜单项   （groupId(分组),itemId（item名）,order（排序）,title（文本内容））
         return true;     //显示菜单
     }
 
