@@ -13,6 +13,8 @@ public class ContextMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_context_menu);
+        showListView();
+    }
     private void showListView(){
         ListView listView=(ListView)findViewById(R.id.listView);
         ArrayAdapter<String>adapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,getData() );
@@ -25,5 +27,5 @@ public class ContextMenuActivity extends AppCompatActivity {
         return list;
         }
     }
-    }
-}
+
+
