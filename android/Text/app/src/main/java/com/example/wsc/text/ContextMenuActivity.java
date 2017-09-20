@@ -2,8 +2,12 @@ package com.example.wsc.text;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -14,12 +18,37 @@ public class ContextMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_context_menu);
         showListView();
-    }
-    private void showListView(){
 
-        ArrayAdapter<String>adapter=new ArrayAdapter<String>(ContextMenuActivity.this,android.R.layout.simple_list_item_1,getData());
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        menu.setHeaderTitle("文件操作");
+        menu.setHeaderIcon(R.drawable.wsc);
+        menu.add(1,1,1,"复制");
+        menu.add(1,2,1,"剪切");
+        menu.add(1,3,1,"粘贴");
+        menu.add(1,4,1,"重命名");
+        menu.add(1,5,1,"自定义");
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case 1:
+                Toast.makeText(ContextMenuActivity.this,"这是复制",Toast.LENGTH_SHORT);
+        }
+        return super.onContextItemSelected(item);
+
+    }
+
+    private void showListView(){
+        //设置listView显示内容
         ListView listView=(ListView)findViewById(R.id.list_View);
+        ArrayAdapter<String>adapter=new ArrayAdapter<String>(ContextMenuActivity.this,android.R.layout.simple_list_item_1,getData());
         listView.setAdapter(adapter);
+        this.registerForContextMenu(listView);
     }
     private ArrayList<String>getData(){
     ArrayList<String>list=new ArrayList<String>();
@@ -28,6 +57,7 @@ public class ContextMenuActivity extends AppCompatActivity {
         }
         return list;
         }
+
     }
 
 
