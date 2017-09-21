@@ -21,7 +21,7 @@ public class ContextMenuActivity extends AppCompatActivity {
 
     }
 
-    @Override
+    @Override//重写上下文菜单内容
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         menu.setHeaderTitle("文件操作");
@@ -46,10 +46,10 @@ public class ContextMenuActivity extends AppCompatActivity {
 
     private void showListView(){
         //设置listView显示内容
-        ListView listView=(ListView)findViewById(R.id.list_View);
+        ListView listView=(ListView)findViewById(R.id.list_View);//获取元素
         ArrayAdapter<String>adapter=new ArrayAdapter<String>(ContextMenuActivity.this,android.R.layout.simple_list_item_1,getData());
         listView.setAdapter(adapter);
-        this.registerForContextMenu(listView);
+        this.registerForContextMenu(listView);//给View注册上下文菜单
     }
     private ArrayList<String>getData(){
     ArrayList<String>list=new ArrayList<String>();
