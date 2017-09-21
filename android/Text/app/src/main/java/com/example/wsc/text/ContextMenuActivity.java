@@ -26,6 +26,7 @@ public class ContextMenuActivity extends AppCompatActivity {
         super.onCreateContextMenu(menu, v, menuInfo);
         menu.setHeaderTitle("文件操作");
         menu.setHeaderIcon(R.drawable.wsc);
+        //代码动态添加（add）
         menu.add(1,1,1,"复制");
         menu.add(1,2,1,"剪切");
         menu.add(1,3,1,"粘贴");
