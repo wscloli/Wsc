@@ -1,5 +1,6 @@
 package com.example.wsc.text;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -18,7 +19,7 @@ public class ContextMenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_context_menu);
         showListView();
-
+        
     }
 
     @Override//重写上下文菜单内容
