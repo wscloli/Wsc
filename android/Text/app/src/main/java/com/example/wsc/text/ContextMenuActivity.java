@@ -39,7 +39,7 @@ public class ContextMenuActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case 1:
-                Toast.makeText(ContextMenuActivity.this,"这是复制",Toast.LENGTH_SHORT);
+                Toast.makeText(ContextMenuActivity.this,"这是复制",Toast.LENGTH_SHORT).show();
         }
         return super.onContextItemSelected(item);
 
