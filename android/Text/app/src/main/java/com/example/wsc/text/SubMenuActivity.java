@@ -56,7 +56,7 @@ public class SubMenuActivity extends AppCompatActivity {
             }*/
        switch (item.getItemId()){
            case R.id.file_item1:
-               Toast.makeText(this, "这是复制",Toast.LENGTH_SHORT).show();
+               Toast.makeText(this, "这是复制(xml)",Toast.LENGTH_SHORT).show();
                break;
            case R.id.file_item2:
                //后面懒得写，省略
