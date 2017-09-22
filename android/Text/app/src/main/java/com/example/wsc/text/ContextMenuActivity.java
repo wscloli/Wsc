@@ -25,7 +25,7 @@ public class ContextMenuActivity extends AppCompatActivity {
     @Override//重写上下文菜单内容
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
-        menu.setHeaderTitle("文件操作");
+        menu.setHeaderTitle( "文件操作");
         menu.setHeaderIcon(R.drawable.wsc);
         //代码动态添加（add）
         menu.add(1,1,1,"复制");

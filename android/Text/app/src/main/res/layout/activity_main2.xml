@@ -17,7 +17,13 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="菜单练习"
+        android:text="上下文菜单练习"
          />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="子菜单练习" />
 
 </LinearLayout>
