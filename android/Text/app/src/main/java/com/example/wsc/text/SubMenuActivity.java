@@ -2,8 +2,31 @@ package com.example.wsc.text;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.SubMenu;
 
 public class SubMenuActivity extends AppCompatActivity {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //手动添加菜单
+        SubMenu file=menu.addSubMenu("文件");
+        SubMenu edit=menu.addSubMenu("编辑");//添加主菜单
+        //添加子菜单
+        file.add(1,1,1,"新建");
+        file.add(1,2,1,"粘贴");
+        file.add(1,3,1,"剪切");
+        file.add(1,4,1,"重命名");
+
+        //设置标题名
+        file.setHeaderTitle("wsc");
+
+        edit.add(2,1,1,"新建");
+        edit.add(2,2,1,"粘贴");
+        edit.add(2,3,1,"剪切");
+        edit.add(2,4,1,"重命名");
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
