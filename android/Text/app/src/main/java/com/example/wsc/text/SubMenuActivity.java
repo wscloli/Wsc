@@ -3,7 +3,9 @@ package com.example.wsc.text;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.SubMenu;
+import android.widget.Toast;
 
 public class SubMenuActivity extends AppCompatActivity {
     @Override
@@ -27,6 +29,33 @@ public class SubMenuActivity extends AppCompatActivity {
 
         return super.onCreateOptionsMenu(menu);
     }
+
+    @Override//重写设置响应事件
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getGroupId() == 1) {
+            switch (item.getItemId()) {
+                case 1:
+                    Toast.makeText(this,"这是复制1",Toast.LENGTH_SHORT).show();
+                    break;
+                case 2:
+                case 3:
+                case 4:
+
+            }
+        }else if (item.getGroupId() == 2) {
+                switch (item.getItemId()) {
+                    case 1:
+                        Toast.makeText(this,"这是复制2",Toast.LENGTH_SHORT).show();
+                        break;
+                    case 2:
+                    case 3:
+                    case 4:
+                }
+            }
+
+
+            return super.onOptionsItemSelected(item);
+        }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
