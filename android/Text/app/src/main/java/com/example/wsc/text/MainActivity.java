@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //显式intent
-                // Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                 //隐式intent
-                Intent intent=new Intent("com.example.activitytest.ACTION_START");
-                intent.addCategory("com.example.activitytest.MY_CATEGORY");
+                //Intent intent=new Intent("com.example.activitytest.ACTION_START");
+                //intent.addCategory("com.example.activitytest.MY_CATEGORY");
                 startActivity(intent);
             }
         });
