@@ -73,13 +73,12 @@ public class Main2Activity extends AppCompatActivity {
                 //调出拨打电话界面
                 //Intent intent=new Intent(Intent.ACTION_DIAL);
                 //intent.setData(Uri.parse("tel:10086"));
-                //直接拨打电话
-                Intent intent=new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:10086"));
+
                 //地理位置定位
                 //Intent intent=new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("geo:38.899533,-77.036476"));
-
+                Intent intent=new Intent(Intent.ACTION_DELETE);
+                intent.setData(Uri.fromParts("package","xxx",null));
                 //<intent-filter> 中配置的<data> 的使用
                 startActivity(intent);
 
