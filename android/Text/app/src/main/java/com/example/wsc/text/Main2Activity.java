@@ -62,14 +62,28 @@ public class Main2Activity extends AppCompatActivity {
         });
 
         //隐式intent
-        Button button3=(Button) findViewById(R.id.button7);
+        Button button7=(Button) findViewById(R.id.button7);
         //设置点击响应
-        button3.setOnClickListener(new View.OnClickListener() {
+        button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Intent.ACTION_VIEW);
-                //
-                intent.setData(Uri.parse("http://www.baidu.com"));
+                //打开网页
+                //Intent intent=new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse("http://www.baidu.com"));
+                //调出拨打电话界面
+                //Intent intent=new Intent(Intent.ACTION_DIAL);
+                //intent.setData(Uri.parse("tel:10086"));
+                //直接拨打电话
+                Intent intent=new Intent(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:10086"));
+                //地理位置定位
+                //Intent intent=new Intent(Intent.ACTION_VIEW);
+                //intent.setData(Uri.parse("geo:38.899533,-77.036476"));
+
+                //<intent-filter> 中配置的<data> 的使用
+                startActivity(intent);
+
+
 
             }
         });
