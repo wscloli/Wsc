@@ -20,7 +20,7 @@
                 <action android:name="com.example.activitytest.ACTION_START"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 //隐式intent
-                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="android.intent.action.VIEW"/>//响应Intent
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="tel"/>
                <!-- <data android:scheme="geo"/>-->
