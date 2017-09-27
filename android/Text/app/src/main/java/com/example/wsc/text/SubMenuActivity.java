@@ -93,12 +93,12 @@ public class SubMenuActivity extends AppCompatActivity {
         });
     }
 
-    @Override//当按Back键返回上一活动时，可以重写此方法
+    /*@Override//当按Back键返回上一活动时，可以重写此方法
     public void onBackPressed() {
         Intent intent=new Intent();
         intent.putExtra("data_return","Hello MIKU");
         setResult(RESULT_OK,intent);
         finish();
 
-    }
+    }*/
 }

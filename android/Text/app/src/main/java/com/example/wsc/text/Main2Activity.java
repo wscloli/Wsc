@@ -91,11 +91,11 @@ public class Main2Activity extends AppCompatActivity {
          button8.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 String data="Hello miku!";//要传递的数据
+                 //String data="Hello miku!";//要传递的数据
                  Intent intent=new Intent(Main2Activity.this, SubMenuActivity.class);
-                 intent.putExtra("extra_data",data);//传递数据
+                 //intent.putExtra("extra_data",data);//传递数据
                  //startActivity(intent);
-                //startActivityForResult(intent,1);//启动活动后可以返回一个结果给上一个活动
+                 startActivityForResult(intent,1);//启动活动后可以返回一个结果给上一个活动
             }
         });
     }
@@ -104,7 +104,7 @@ public class Main2Activity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //检测requestCode的值判断数据来源
 
-        switch(resultCode) {
+        switch(requestCode) {
             case 1:
                if(resultCode==RESULT_OK){
                    String returnedData=data.getStringExtra("data_return");
