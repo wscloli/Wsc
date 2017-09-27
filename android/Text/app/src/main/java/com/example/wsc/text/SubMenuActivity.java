@@ -1,7 +1,9 @@
 package com.example.wsc.text;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
@@ -69,5 +71,9 @@ public class SubMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_menu);
+        //取出传递的数据
+        Intent intent=getIntent();//获取用于启动活动的Intent
+        String data=intent.getStringExtra("extra_data");//传入相应的键值，得到传递的数据
+        Log.d("SubMenuActivity",data);
     }
 }

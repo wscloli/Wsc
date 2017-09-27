@@ -90,8 +90,8 @@ public class Main2Activity extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  String data="Hello miku!";//要传递的数据
-                 Intent intent=new Intent(Main2Activity.this, MainActivity.class);
-                 intent.putExtra("extra_data",data);
+                 Intent intent=new Intent(Main2Activity.this, SubMenuActivity.class);
+                 intent.putExtra("extra_data",data);//传递数据
                  startActivity(intent);
              }
          });
