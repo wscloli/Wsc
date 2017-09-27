@@ -4,11 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
@@ -92,11 +94,25 @@ public class Main2Activity extends AppCompatActivity {
                  String data="Hello miku!";//要传递的数据
                  Intent intent=new Intent(Main2Activity.this, SubMenuActivity.class);
                  intent.putExtra("extra_data",data);//传递数据
-                 startActivity(intent);
-             }
-         });
-
+                 //startActivity(intent);
+                //startActivityForResult(intent,1);//启动活动后可以返回一个结果给上一个活动
+            }
+        });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //检测requestCode的值判断数据来源
 
+        switch(resultCode) {
+            case 1:
+               if(resultCode==RESULT_OK){
+                   String returnedData=data.getStringExtra("data_return");
+                   Log.d("Main2Activity",returnedData);
+               }
+               break;
+            default:
+        }
+
+    }
 }

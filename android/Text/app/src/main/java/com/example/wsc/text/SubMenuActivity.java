@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class SubMenuActivity extends AppCompatActivity {
@@ -71,9 +73,32 @@ public class SubMenuActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub_menu);
+        //向下一活动传递数据
         //取出传递的数据
-        Intent intent=getIntent();//获取用于启动活动的Intent
+        /*Intent intent=getIntent();//获取用于启动活动的Intent
         String data=intent.getStringExtra("extra_data");//传入相应的键值，得到传递的数据
-        Log.d("SubMenuActivity",data);
+        Log.d("SubMenuActivity",data);*/
+       //返回数据给上一活动
+        Button button10=(Button)findViewById(R.id.button10);
+        button10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.putExtra("data_return","HELLO MIKU!");
+                setResult(RESULT_OK,intent);//专门向上一活动返回数据的
+                finish();//销毁当前活动的
+                //会返回上一活动的onActivityResult()方法
+                //要在上一活动重写此活动
+            }
+        });
+    }
+
+    @Override//当按Back键返回上一活动时，可以重写此方法
+    public void onBackPressed() {
+        Intent intent=new Intent();
+        intent.putExtra("data_return","Hello MIKU");
+        setResult(RESULT_OK,intent);
+        finish();
+
     }
 }
