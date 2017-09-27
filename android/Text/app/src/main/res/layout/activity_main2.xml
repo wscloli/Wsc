@@ -31,5 +31,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="隐式intent练习" />
-
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="向下一活动传递数据" />
 </LinearLayout>

@@ -52,7 +52,7 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
         //
-        Button button2=(Button)findViewById(R.id.button6);
+        Button button2=(Button)findViewById(R.id.button6);//获取控件
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,24 +71,30 @@ public class Main2Activity extends AppCompatActivity {
                 //Intent intent=new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("http://www.baidu.com"));
                 //调出拨打电话界面
-                //Intent intent=new Intent(Intent.ACTION_DIAL);
-                //intent.setData(Uri.parse("tel:10086"));
+                Intent intent=new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
 
                 //地理位置定位
                 //Intent intent=new Intent(Intent.ACTION_VIEW);
                 //intent.setData(Uri.parse("geo:38.899533,-77.036476"));
-                Intent intent=new Intent(Intent.ACTION_DELETE);
-                intent.setData(Uri.fromParts("package","xxx",null));
+                //卸载软件
+                //Intent intent=new Intent(Intent.ACTION_DELETE);
+                //intent.setData(Uri.fromParts("package","xxx",null));
                 //<intent-filter> 中配置的<data> 的使用
                 startActivity(intent);
-
-
-
             }
         });
-
-
-
+    //向下一活动传递数据
+         Button button8=(Button) findViewById(R.id.button8);//获取控件
+         button8.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 String data="Hello miku!";//要传递的数据
+                 Intent intent=new Intent(Main2Activity.this, MainActivity.class);
+                 intent.putExtra("extra_data",data);
+                 startActivity(intent);
+             }
+         });
 
     }
 
