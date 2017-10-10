@@ -1,6 +1,7 @@
 package com.example.wsc.activitylifecycletest;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG="MainActivity";
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    //活动回收回调
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
     //活动的生命周期
 
     @Override
