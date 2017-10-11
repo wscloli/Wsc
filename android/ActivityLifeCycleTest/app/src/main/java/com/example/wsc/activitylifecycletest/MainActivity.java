@@ -37,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
     }
     //活动回收回调
 
-    @Override
+    @Override  // 将临时数据进行保存
     public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+        super.onSaveInstanceState(outState);
+        String tempData="Something~";
+        outState.putString("data_key",tempData);  //保存字符串
+
     }
 
     //活动的生命周期
