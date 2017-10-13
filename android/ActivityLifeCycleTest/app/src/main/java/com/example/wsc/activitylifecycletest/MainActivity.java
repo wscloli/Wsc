@@ -16,6 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG,"onCreate");
+
+        //获取之前回收保存的数据
+        if(savedInstanceState !=null){
+            String tempData=savedInstanceState.getString("data_key");
+            Log.d(TAG, tempData);
+        }
         //打印日志 1：（当前类名）对打印数据进行过滤 2：想要打印的具体内容
         Button startNormalActivity=(Button)findViewById(R.id.button1);
         Button startDialogActivity=(Button)findViewById(R.id.button2);
