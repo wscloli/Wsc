@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG,"onCreate");
 
-        //获取之前回收保存的数据
+        //获取之前回收保存的数据 
         if(savedInstanceState !=null){
             String tempData=savedInstanceState.getString("data_key");
             Log.d(TAG, tempData);
