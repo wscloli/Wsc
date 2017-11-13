@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //活动回收回调
 
-    @Override  // 将临时数据进行保存
+    @Override  // 将临时数据进行保存 onSaveINstanceState回调方法
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         String tempData="Something~";
