@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //活动的生命周期
+ //活动的生命周期
 
     @Override
     protected void onStart() {
