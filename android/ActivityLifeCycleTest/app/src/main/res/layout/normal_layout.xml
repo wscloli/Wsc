@@ -10,4 +10,14 @@
         android:layout_height="wrap_content"
         android:text="这是normal活动"
         />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:text="跳转到主页"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:text="跳转到Dia"/>
 </LinearLayout>
