@@ -1,0 +1,26 @@
+git clone https。。。。。（GitHub仓库地址）
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+
+git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
+
+git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
+
+git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
+
+git reset --hard head   (master|MERGING）冲突时用恢复
+
+git status 查看全部
+
+$ git pull --rebase origin master       error: failed to push some refs to 'https://github.com/wscloli/Wsc.git'
+git remote add oriagin     
+
+在本地新建一个分支： git branch newBranch 
+切换到你的新分支: git checkout newBranch 
+将新分支发布在github上： git push origin newBranch 
+在本地删除一个分支： git branch -d newBranch 
+在github远程端删除一个分支： git push origin :newBranch (分支名前的冒号代表删除) 
+/git push origin –delete newBranch 
+注意删除远程分支后，如果有对应的本地分支，本地分支并不会同步删除！  
