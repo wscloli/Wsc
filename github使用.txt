@@ -3,6 +3,11 @@ git clone https。。。。。（GitHub仓库地址）
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 
+//清理缓存
+git config --local --unset credential.helper
+git config --global --unset credential.helper
+git config --system --unset credential.helper
+
 
 git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
 
@@ -12,7 +17,9 @@ git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤
 
 git reset --hard head   (master|MERGING）冲突时用恢复
 
-git status 查看全部
+git status   //查看全部
+
+git pull     //将github数据同步下载到本地
 
 $ git pull --rebase origin master       error: failed to push some refs to 'https://github.com/wscloli/Wsc.git'
 git remote add oriagin     
